@@ -20,3 +20,18 @@ $primary-color: color("grey", "darken-3") !default;
 .nav-wrapper{
   padding-right: 10px;
 }
+
+.home {
+  background: url("https://s3.amazonaws.com/course_report_staging/close_up_code.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;;
+  padding: 0px;
+}
+
+.header {
+  display: block;
+  padding: 0px;
+  color: white;
+}
+
