@@ -16,3 +16,7 @@
 @import "materialize/components/color";
 $primary-color: color("grey", "darken-3") !default;
 @import "materialize";
+
+.nav-wrapper{
+  padding-right: 10px;
+}
