@@ -41,7 +41,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'rspec-pride'
+  gem 'pry'
   gem 'capybara'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 
 group :development do
