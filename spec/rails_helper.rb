@@ -7,6 +7,7 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara'
 require 'database_cleaner'
+require 'launchy'
 # Add additional requires below this line. Rails is not loaded until this point!
 DatabaseCleaner.strategy = :truncation
 
