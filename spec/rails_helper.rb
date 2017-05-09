@@ -28,15 +28,15 @@ def stub_omniauth
     extra: {
       raw_info: {
         user_id: "1234",
-        name: "Colleen"
+        name: "Colleen Ward"
       }
     },
     credentials: {
-      token: "pizza",
+      token: ENV['GITHUB_USER_TOKEN'],
       secret: "secretpizza"
     },
     info: {
-      nickname: "caward"
+      nickname: "caward12"
     }
     })
 end

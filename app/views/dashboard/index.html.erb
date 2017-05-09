@@ -1,5 +1,24 @@
 <% if current_user %>
- <h4> <%= current_user.name %>'s Dashboard</h4>
+ <h6> <%= current_user.name %>'s Dashboard</h6>
  <% else %>
  <h4> Guest Dashboard </h4>
  <% end %>
+
+ <div class="row">
+   <div class ="col s6">
+     <%= image_tag(@user.avatar_url) %>
+   </div>
+   <div class="col s3">
+     Starred repos:<%#= GithubUser.starred(current_user.nickname).count %>
+   </div>
+ </div>
+ <div class="row">
+   <div class ="col s6">
+     <h5><%= current_user.name %></h5>
+   </div>
+ </div>
+ <div class="row">
+   <div class ="col s6">
+     <h6><%= current_user.nickname%></h6>
+   </div>
+ </div>
