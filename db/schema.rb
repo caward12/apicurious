@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508223414) do
+ActiveRecord::Schema.define(version: 20170508235640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string "screen_name"
+    t.string "nickname"
     t.string "uid"
     t.string "name"
     t.string "oauth_token"
