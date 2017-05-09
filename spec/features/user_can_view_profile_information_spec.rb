@@ -13,7 +13,7 @@ RSpec.describe "User logs in with github" do
     assert_equal "/dashboard", current_path
 
     expect(page).to have_content("Colleen Ward")
-    expect(page).to have_content("caward")
+    expect(page).to have_content("caward12")
     expect(page).to have_css("img[src*='https://avatars3.githubusercontent.com/u/20826865?v=3']")
     expect(page).to have_content("Starred repos: 0")
   end

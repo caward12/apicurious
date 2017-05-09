@@ -27,7 +27,7 @@ def stub_omniauth
     provider: 'github',
     extra: {
       raw_info: {
-        user_id: "1234",
+        uid: "1234",
         name: "Colleen Ward"
       }
     },
