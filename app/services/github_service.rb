@@ -4,18 +4,16 @@ class GithubService
     @_connection = Faraday.new("https://api.github.com/")
   end
 
-  def starred(nickname)
-    response = connection.get "/users/#{nickname}/starred?access_token#{@token}"
-    parser(response)
+  def starred
+    parser(connection.get "/user/starred?access_token=#{@token}")
   end
 
-  def search_user(nickname)
-    response = connection.get "/users/#{nickname}?access_token=#{@token}"
-    parser(response)
+  def search_user
+    parser(connection.get "/user?access_token=#{@token}")
   end
 
-  def followers(nickname)
-    parser(connection.get "/users/#{nickname}/followers?access_token=#{@token}")
+  def followers
+    parser(connection.get "/user/followers?access_token=#{@token}")
   end
 
 

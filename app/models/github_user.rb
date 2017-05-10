@@ -10,8 +10,8 @@ class GithubUser
     @attrs[:login]
   end
 
-  def self.search_user(token, nickname)
-    user = GithubService.new(token).search_user(nickname)
+  def self.search_user(token)
+    user = GithubService.new(token).search_user
     new(user)
   end
 
@@ -19,12 +19,12 @@ class GithubUser
     attrs[:avatar_url]
   end
 
-  def starred(token, nickname)
-    GithubService.new(token).starred(nickname)
+  def starred(token)
+    GithubService.new(token).starred
   end
 
-  def followers(token, nickname)
-    GithubService.new(token).followers(nickname).map do |user|
+  def followers(token)
+    GithubService.new(token).followers.map do |user|
       user[:login]
     end
   end
