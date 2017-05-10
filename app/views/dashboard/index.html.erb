@@ -28,3 +28,9 @@
      <h6><%= current_user.nickname%></h6>
    </div>
  </div>
+ <div class="row">
+   <div class ="col s6">
+  
+     Organizations: <%= @user.organizations(@user.token).count%>
+   </div>
+ </div>

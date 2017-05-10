@@ -40,5 +40,9 @@ class GithubUser
     Repo.repos(token)
   end
 
+  def organizations(token)
+    Organization.organizations(token)
+  end
+
 
 end

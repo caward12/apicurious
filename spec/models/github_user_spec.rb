@@ -65,4 +65,17 @@ describe 'GithubUser' do
       end
     end
   end
+
+  context 'orgs' do
+    it "can find all organizations" do
+      VCR.use_cassette("github_user_orgs") do
+        token = ENV['GITHUB_USER_TOKEN']
+        user = GithubUser.search_user(token)
+        orgs = user.organizations(token)
+
+        expect(orgs).to be_an(Array)
+        expect(orgs.count).to eq(0)
+      end
+    end
+  end
 end

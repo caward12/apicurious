@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 17:40:58 GMT
+      - Wed, 10 May 2017 19:43:37 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4916'
+      - '4859'
       X-Ratelimit-Reset:
-      - '1494439980'
+      - '1494447459'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -64,12 +64,12 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - edf23fdc48375d9066b698b8d98062e9
+      - 62cdcc2d03a2f173f1c58590d1a90077
       X-Github-Request-Id:
-      - DDE2:3FEC:260EA0C:2F663D2:591350AA
+      - F100:4005:6FA1AEB:8B26DF8:59136D69
     body:
       encoding: ASCII-8BIT
       string: '[{"login":"Carmer","id":9501766,"avatar_url":"https://avatars0.githubusercontent.com/u/9501766?v=3","gravatar_id":"","url":"https://api.github.com/users/Carmer","html_url":"https://github.com/Carmer","followers_url":"https://api.github.com/users/Carmer/followers","following_url":"https://api.github.com/users/Carmer/following{/other_user}","gists_url":"https://api.github.com/users/Carmer/gists{/gist_id}","starred_url":"https://api.github.com/users/Carmer/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Carmer/subscriptions","organizations_url":"https://api.github.com/users/Carmer/orgs","repos_url":"https://api.github.com/users/Carmer/repos","events_url":"https://api.github.com/users/Carmer/events{/privacy}","received_events_url":"https://api.github.com/users/Carmer/received_events","type":"User","site_admin":false},{"login":"NicholasJacques","id":20036943,"avatar_url":"https://avatars3.githubusercontent.com/u/20036943?v=3","gravatar_id":"","url":"https://api.github.com/users/NicholasJacques","html_url":"https://github.com/NicholasJacques","followers_url":"https://api.github.com/users/NicholasJacques/followers","following_url":"https://api.github.com/users/NicholasJacques/following{/other_user}","gists_url":"https://api.github.com/users/NicholasJacques/gists{/gist_id}","starred_url":"https://api.github.com/users/NicholasJacques/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/NicholasJacques/subscriptions","organizations_url":"https://api.github.com/users/NicholasJacques/orgs","repos_url":"https://api.github.com/users/NicholasJacques/repos","events_url":"https://api.github.com/users/NicholasJacques/events{/privacy}","received_events_url":"https://api.github.com/users/NicholasJacques/received_events","type":"User","site_admin":false},{"login":"VictoriaVasys","id":10079657,"avatar_url":"https://avatars3.githubusercontent.com/u/10079657?v=3","gravatar_id":"","url":"https://api.github.com/users/VictoriaVasys","html_url":"https://github.com/VictoriaVasys","followers_url":"https://api.github.com/users/VictoriaVasys/followers","following_url":"https://api.github.com/users/VictoriaVasys/following{/other_user}","gists_url":"https://api.github.com/users/VictoriaVasys/gists{/gist_id}","starred_url":"https://api.github.com/users/VictoriaVasys/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/VictoriaVasys/subscriptions","organizations_url":"https://api.github.com/users/VictoriaVasys/orgs","repos_url":"https://api.github.com/users/VictoriaVasys/repos","events_url":"https://api.github.com/users/VictoriaVasys/events{/privacy}","received_events_url":"https://api.github.com/users/VictoriaVasys/received_events","type":"User","site_admin":false}]'
     http_version: 
-  recorded_at: Wed, 10 May 2017 17:40:58 GMT
+  recorded_at: Wed, 10 May 2017 19:43:37 GMT
 recorded_with: VCR 3.0.3

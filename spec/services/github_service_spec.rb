@@ -18,7 +18,6 @@ describe GithubService do
     it "finds user's starred repos" do
       VCR.use_cassette("github_service_starred") do
         token = ENV['GITHUB_USER_TOKEN']
-        nickname = "caward12"
         starred = GithubService.new(token).starred
 
         expect(starred).to be_an(Array)
@@ -31,7 +30,6 @@ describe GithubService do
     it "finds user's followers" do
       VCR.use_cassette("github_service_followers") do
         token = ENV['GITHUB_USER_TOKEN']
-        nickname = "caward12"
         followers = GithubService.new(token).followers
 
         expect(followers).to be_an(Array)
@@ -45,7 +43,6 @@ describe GithubService do
     it "finds user's following" do
       VCR.use_cassette("github_service_following") do
         token = ENV['GITHUB_USER_TOKEN']
-        nickname = "caward12"
         following = GithubService.new(token).following
 
         expect(following).to be_an(Array)
@@ -59,12 +56,23 @@ describe GithubService do
     it "finds user's repositories" do
       VCR.use_cassette("github_service_repos") do
         token = ENV['GITHUB_USER_TOKEN']
-        nickname = "caward12"
         repos = GithubService.new(token).repos
 
         expect(repos).to be_an(Array)
         expect(repos.first).to be_a(Hash)
         expect(repos.count).to eq(30)
+      end
+    end
+  end
+
+  context "organizations" do
+    it "find's user's organizations" do
+      VCR.use_cassette("github_service_orgs") do
+        token = ENV['GITHUB_USER_TOKEN']
+        orgs = GithubService.new(token).organizations
+
+        expect(orgs).to be_an(Array)
+        expect(orgs.count).to eq(0)
       end
     end
   end

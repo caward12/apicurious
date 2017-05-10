@@ -24,6 +24,10 @@ class GithubService
     parser(connection.get "/user/repos?access_token=#{@token}")
   end
 
+  def organizations
+    parser(connection.get "/user/orgs?access_token=#{@token}")
+  end
+
 
   private
 
