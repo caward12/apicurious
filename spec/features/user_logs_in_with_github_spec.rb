@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "User logs in with github" do
   it "they can log in with github" do
-    skip
     Capybara.app = Apicurious::Application
     stub_omniauth
 

@@ -6,7 +6,7 @@
      <%= image_tag(@user.avatar_url) %>
    </div>
    <div class="col s3">
-     Starred repos:<%#= GithubUser.starred(current_user.nickname).count %>
+     Starred repos: <%= @user.starred(current_user.oauth_token, @user.nickname).count %>
    </div>
  </div>
  <div class="row">

@@ -1,14 +1,26 @@
 class GithubUser
 
-  attr_reader :avatar_url
+  attr_reader :attrs
 
   def initialize(attrs={})
-    @avatar_url = attrs[:avatar_url]
+    @attrs = attrs
   end
 
-  def self.search_user(token)
-    user = GithubService.search_user(token)
+  def nickname
+    @attrs[:login]
+  end
+
+  def self.search_user(token, nickname)
+    user = GithubService.new(token).search_user(nickname)
     new(user)
+  end
+
+  def avatar_url
+    attrs[:avatar_url]
+  end
+
+  def starred(token, nickname)
+    GithubService.new(token).starred(nickname)
   end
 
 
