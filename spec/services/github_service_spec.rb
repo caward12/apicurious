@@ -54,4 +54,18 @@ describe GithubService do
       end
     end
   end
+
+  context "repos" do
+    it "finds user's repositories" do
+      VCR.use_cassette("github_service_repos") do
+        token = ENV['GITHUB_USER_TOKEN']
+        nickname = "caward12"
+        repos = GithubService.new(token).repos
+
+        expect(repos).to be_an(Array)
+        expect(repos.first).to be_a(Hash)
+        expect(repos.count).to eq(30)
+      end
+    end
+  end
 end

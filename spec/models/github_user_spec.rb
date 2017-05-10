@@ -13,12 +13,13 @@ describe 'GithubUser' do
 
   context 'starred' do
     it "can find starred repos" do
-      VCR.use_cassette("github_user_repos") do
+      VCR.use_cassette("github_user_starred") do
         token = ENV['GITHUB_USER_TOKEN']
         user = GithubUser.search_user(token)
         starred = user.starred(token)
 
         expect(starred).to be_an(Array)
+        expect(starred.first).to be_a(Repo)
         expect(starred.count).to eq(1)
       end
     end
@@ -47,6 +48,20 @@ describe 'GithubUser' do
 
         expect(following).to be_an(Array)
         expect(following.count).to eq(1)
+      end
+    end
+  end
+
+  context 'repos' do
+    it "can find all repos" do
+      VCR.use_cassette("github_user_repos") do
+        token = ENV['GITHUB_USER_TOKEN']
+        user = GithubUser.search_user(token)
+        repos = user.repos(token)
+
+        expect(repos).to be_an(Array)
+        expect(repos.first).to be_a(Repo)
+        expect(repos.count).to eq(30)
       end
     end
   end

@@ -5,7 +5,9 @@
    <div class ="col s4">
      <%= image_tag(@user.avatar_url) %>
    </div>
-
+   <div class="col s2">
+      Repositories: <%= @user.repos(@user.token).count %>
+   </div>
    <div class="col s2">
        Starred repos: <%= @user.starred(@user.token).count %>
    </div>

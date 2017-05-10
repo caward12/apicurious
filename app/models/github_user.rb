@@ -21,21 +21,23 @@ class GithubUser
   end
 
   def starred(token)
-    Starred.starred(token).map do |user|
-      GithubUser.new(user, token)
-    end
+    Repo.starred(token)
   end
 
   def followers(token)
-    Followers.followers(token).map do |user|
+    GithubService.new(token).followers.map do |user|
       GithubUser.new(user, token)
     end
   end
 
   def following(token)
-    Following.following(token).map do |user|
+    GithubService.new(token).following.map do |user|
       GithubUser.new(user, token)
     end
+  end
+
+  def repos(token)
+    Repo.repos(token)
   end
 
 
