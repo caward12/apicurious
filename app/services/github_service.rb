@@ -16,6 +16,10 @@ class GithubService
     parser(connection.get "/user/followers?access_token=#{@token}")
   end
 
+  def following
+    parser(connection.get "/user/following?access_token=#{@token}")
+  end
+
 
   private
 

@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/user/following?access_token=<GITHUB_USER_TOKEN>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.11.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Wed, 10 May 2017 18:09:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4863'
+      X-Ratelimit-Reset:
+      - '1494439980'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      Etag:
+      - W/"e1d8b60b3dd9f16ff0cb5b0382fdbc9b"
+      X-Oauth-Scopes:
+      - admin:gpg_key, admin:org, admin:org_hook, admin:public_key, admin:repo_hook,
+        delete_repo, gist, notifications, repo, user
+      X-Accepted-Oauth-Scopes:
+      - ''
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Security-Policy:
+      - default-src 'none'
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - deny
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Github-Request-Id:
+      - EC4B:3FF6:4A29A02:5C500E3:59135765
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"login":"TheKaterTot","id":1721599,"avatar_url":"https://avatars3.githubusercontent.com/u/1721599?v=3","gravatar_id":"","url":"https://api.github.com/users/TheKaterTot","html_url":"https://github.com/TheKaterTot","followers_url":"https://api.github.com/users/TheKaterTot/followers","following_url":"https://api.github.com/users/TheKaterTot/following{/other_user}","gists_url":"https://api.github.com/users/TheKaterTot/gists{/gist_id}","starred_url":"https://api.github.com/users/TheKaterTot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/TheKaterTot/subscriptions","organizations_url":"https://api.github.com/users/TheKaterTot/orgs","repos_url":"https://api.github.com/users/TheKaterTot/repos","events_url":"https://api.github.com/users/TheKaterTot/events{/privacy}","received_events_url":"https://api.github.com/users/TheKaterTot/received_events","type":"User","site_admin":false}]'
+    http_version: 
+  recorded_at: Wed, 10 May 2017 18:09:41 GMT
+recorded_with: VCR 3.0.3

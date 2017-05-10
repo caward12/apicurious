@@ -2,22 +2,23 @@
 <div class="row">
 </div>
  <div class="row">
-   <div class ="col s6">
+   <div class ="col s4">
      <%= image_tag(@user.avatar_url) %>
    </div>
-   <div class="col s3">
-     Starred repos: <%= @user.starred(current_user.oauth_token).count %><br><br>
-     Your Followers:
-     <ul>
-       <% @user.followers(current_user.oauth_token).each do |user| %>
-        <li> <%= user %></li>
-       <% end %>
-     </ul>
+
+   <div class="col s2">
+       Starred repos: <%= @user.starred(@user.token).count %>
    </div>
+   <div class="col s2">
+       Followers: <%= @user.followers(@user.token).count %>
+   </div>
+   <div class="col s2">
+      Following: <%= @user.following(@user.token).count %>
+    </div>
  </div>
  <div class="row">
    <div class ="col s6">
-     <h5><%= current_user.name %></h5>
+     <h5><strong><%= current_user.name %></strong></h5>
    </div>
  </div>
  <div class="row">

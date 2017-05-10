@@ -1,9 +1,10 @@
 class GithubUser
 
-  attr_reader :attrs
+  attr_reader :attrs, :token
 
-  def initialize(attrs={})
+  def initialize(attrs={}, token)
     @attrs = attrs
+    @token = token
   end
 
   def nickname
@@ -12,7 +13,7 @@ class GithubUser
 
   def self.search_user(token)
     user = GithubService.new(token).search_user
-    new(user)
+    new(user, token)
   end
 
   def avatar_url
@@ -20,12 +21,20 @@ class GithubUser
   end
 
   def starred(token)
-    GithubService.new(token).starred
+    Starred.starred(token).map do |user|
+      GithubUser.new(user, token)
+    end
   end
 
   def followers(token)
-    GithubService.new(token).followers.map do |user|
-      user[:login]
+    Followers.followers(token).map do |user|
+      GithubUser.new(user, token)
+    end
+  end
+
+  def following(token)
+    Following.following(token).map do |user|
+      GithubUser.new(user, token)
     end
   end
 
