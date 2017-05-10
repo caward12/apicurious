@@ -6,7 +6,13 @@
      <%= image_tag(@user.avatar_url) %>
    </div>
    <div class="col s3">
-     Starred repos: <%= @user.starred(current_user.oauth_token, @user.nickname).count %>
+     Starred repos: <%= @user.starred(current_user.oauth_token, @user.nickname).count %><br><br>
+     Your Followers:
+     <ul>
+       <% @user.followers(current_user.oauth_token, @user.nickname).each do |user| %>
+        <li> <%= user %></li>
+       <% end %>
+     </ul>
    </div>
  </div>
  <div class="row">

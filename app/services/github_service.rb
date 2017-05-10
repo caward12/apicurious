@@ -14,6 +14,10 @@ class GithubService
     parser(response)
   end
 
+  def followers(nickname)
+    parser(connection.get "/users/#{nickname}/followers?access_token=#{@token}")
+  end
+
 
   private
 

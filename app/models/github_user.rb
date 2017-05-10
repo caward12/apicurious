@@ -23,5 +23,11 @@ class GithubUser
     GithubService.new(token).starred(nickname)
   end
 
+  def followers(token, nickname)
+    GithubService.new(token).followers(nickname).map do |user|
+      user[:login]
+    end
+  end
+
 
 end

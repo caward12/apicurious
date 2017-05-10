@@ -16,5 +16,6 @@ RSpec.describe "User logs in with github" do
     expect(page).to have_content("caward12")
     expect(page).to have_css("img[src*='https://avatars3.githubusercontent.com/u/20826865?v=3']")
     expect(page).to have_content("Starred repos: 1")
+    expect(page).to have_content("Your Followers: ")
   end
 end
