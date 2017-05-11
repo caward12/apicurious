@@ -11,6 +11,7 @@ get '/dashboard', to: 'dashboard#index'
 
 namespace :dashboard do
   get '/repos', to: 'repos#index'
+  get '/repos/new', to: 'repos#new'
   get '/following', to: 'following#index'
 end
 

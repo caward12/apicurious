@@ -1,0 +1,13 @@
+<div class="container">
+  Create a new repository
+
+  <%= form_tag("https://api.github.com/user/repos?access_token=#{current_user.oauth_token}", method: 'post', html: {:'data-type' => 'json', multipart: true}) do %>
+  <%= label_tag(:name) %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:description) %>
+  <%= text_field_tag(:description) %>
+  <%= label_tag(:homepage) %>
+  <%= text_field_tag(:homepage) %>
+  <%= submit_tag %>
+  <% end %>
+</div>

@@ -19,6 +19,10 @@ class Notification
     attrs[:repository][:owner][:login]
   end
 
+  def date
+    attrs[:updated_at].to_date
+  end
+
   def self.mentions(token)
     notifications(token).select do |notification|
       notification.reason == 'mention'

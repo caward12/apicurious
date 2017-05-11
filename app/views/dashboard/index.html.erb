@@ -79,7 +79,7 @@
         <div class="card-content">
           <strong>Mentions:</strong><br><br>
             <% @user.mentions.each do |mention| %>
-              <li>From <%= mention.owner %> on <strong><%= mention.repo %></strong> repository </li>
+              <li>From <%= mention.owner %> on <strong><%= mention.repo %></strong> repository on <%= mention.date %></li>
             <% end %>
         </div>
       </div>

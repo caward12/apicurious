@@ -22,6 +22,9 @@
     </div>
     <hr>
     <br>
+    <div class="colm5 s12">
+      <%= button_to "Create new Repo", dashboard_repos_new_path, method: 'get' %>
+    </div>
     <div class="col m9 s12">
       <% @user.repos.each do |repo| %>
         <strong><%= repo.name %></strong>

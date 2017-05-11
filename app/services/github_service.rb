@@ -34,7 +34,7 @@ class GithubService
   end
 
   def notifications
-    parser(connection.get("/notifications", token_param))
+    parser(connection.get("/notifications?all=true", token_param))
   end
 
   private
