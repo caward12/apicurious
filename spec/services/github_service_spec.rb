@@ -85,7 +85,7 @@ describe GithubService do
         events = GithubService.new(token).events(nickname)
 
         expect(events).to be_an(Array)
-        expect(events.first).to be_a(Event)
+        expect(events.count).to eq(30)
       end
     end
   end

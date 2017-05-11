@@ -9,7 +9,7 @@
    </div>
    <div class="col m9 s12">
     <div class="col m3 s12">
-      Repositories: <%= @user.repos.count %>
+      <%= link_to 'Repositories:', dashboard_repos_path %> <%= @user.repos.count %>
     </div>
     <div class="col m3 s12">
       Starred repos: <%= @user.starred.count %>
@@ -18,7 +18,7 @@
       Followers: <%= @user.followers.count %>
     </div>
     <div class="col m3 s12">
-      Following: <%= @user.following.count %>
+      <%= link_to 'Following:', dashboard_following_path %> <%= @user.following.count %>
     </div>
     <hr>
     <br>
@@ -60,6 +60,16 @@
           <strong>Recent Commits:</strong><br><br>
             <% @user.recent_commits(@user.nickname).each do |commit| %>
               <li><em>"<%= commit.message %>"</em>  to <strong><%= commit.repo %></strong> repository </li>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col m10 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong>Open Pull Requests:</strong><br><br>
+            <% @user.open_pull_requests(@user.nickname).each do |pr| %>
+              <li><%= pr.pr_title %> for <strong><%= pr.repo %></strong> repository </li>
             <% end %>
         </div>
       </div>

@@ -6,7 +6,7 @@ describe "organization" do
       VCR.use_cassette("orgs") do
         token = ENV['GITHUB_USER_TOKEN']
         user = GithubUser.search_user(token)
-        orgs = user.organizations(token)
+        orgs = user.organizations
 
         expect(orgs).to be_an(Array)
         expect(orgs.count).to eq(0)

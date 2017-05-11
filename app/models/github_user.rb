@@ -52,5 +52,9 @@ class GithubUser
     Event.recent_commits(nickname, @token)
   end
 
+  def open_pull_requests(nickname)
+    Event.open_pull_requests(nickname, @token)
+  end
+
 
 end

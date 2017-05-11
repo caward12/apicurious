@@ -18,6 +18,7 @@ RSpec.describe "User logs in with github" do
       expect(page).to have_content("Starred repos: 1")
       expect(page).to have_content("Followers: 3")
       expect(page).to have_content("Following: 1")
+      expect(page).to have_content("Recent Commits:")
     end
   end
 end
