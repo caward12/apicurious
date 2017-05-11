@@ -60,7 +60,7 @@ describe GithubService do
 
         expect(repos).to be_an(Array)
         expect(repos.first).to be_a(Hash)
-        expect(repos.count).to eq(30)
+        expect(repos.count).to eq(43)
       end
     end
   end
@@ -73,6 +73,19 @@ describe GithubService do
 
         expect(orgs).to be_an(Array)
         expect(orgs.count).to eq(0)
+      end
+    end
+  end
+
+  context "events" do
+    it "finds user's recent events" do
+      VCR.use_cassette("github_service_events") do
+        token = ENV['GITHUB_USER_TOKEN']
+        nickname = 'caward12'
+        events = GithubService.new(token).events(nickname)
+
+        expect(events).to be_an(Array)
+        expect(events.first).to be_a(Event)
       end
     end
   end

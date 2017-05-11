@@ -17,31 +17,39 @@ class GithubUser
   end
 
   def avatar_url
-    attrs[:avatar_url]
+    @attrs[:avatar_url]
   end
 
-  def starred(token)
-    Repo.starred(token)
+  def starred
+    Repo.starred(@token)
   end
 
-  def followers(token)
-    GithubService.new(token).followers.map do |user|
-      GithubUser.new(user, token)
+  def followers
+    GithubService.new(@token).followers.map do |user|
+      GithubUser.new(user, @token)
     end
   end
 
-  def following(token)
-    GithubService.new(token).following.map do |user|
-      GithubUser.new(user, token)
+  def following
+    GithubService.new(@token).following.map do |user|
+      GithubUser.new(user, @token)
     end
   end
 
-  def repos(token)
-    Repo.repos(token)
+  def repos
+    Repo.repos(@token)
   end
 
-  def organizations(token)
-    Organization.organizations(token)
+  def organizations
+    Organization.organizations(@token)
+  end
+
+  def events(nickname)
+    Event.events(nickname, @token)
+  end
+
+  def recent_commits(nickname)
+    Event.recent_commits(nickname, @token)
   end
 
 

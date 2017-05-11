@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 19:43:03 GMT
+      - Wed, 10 May 2017 21:24:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,16 +31,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4869'
+      - '4997'
       X-Ratelimit-Reset:
-      - '1494447459'
+      - '1494455050'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - W/"614492faafe9d164a55c1e2b81c4c9be"
+      - W/"1a48158827036080ad552de337ca6aa6"
       Last-Modified:
       - Mon, 08 May 2017 16:39:51 GMT
       X-Oauth-Scopes:
@@ -66,16 +66,16 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 15bc4ab707db6d6b474783868c7cc828
+      - 62cdcc2d03a2f173f1c58590d1a90077
       X-Github-Request-Id:
-      - F0F4:4005:6FA040C:8B250CE:59136D47
+      - F56B:3FF6:4BA7135:5E2776F:591384FA
     body:
       encoding: ASCII-8BIT
       string: '{"login":"caward12","id":20826865,"avatar_url":"https://avatars3.githubusercontent.com/u/20826865?v=3","gravatar_id":"","url":"https://api.github.com/users/caward12","html_url":"https://github.com/caward12","followers_url":"https://api.github.com/users/caward12/followers","following_url":"https://api.github.com/users/caward12/following{/other_user}","gists_url":"https://api.github.com/users/caward12/gists{/gist_id}","starred_url":"https://api.github.com/users/caward12/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/caward12/subscriptions","organizations_url":"https://api.github.com/users/caward12/orgs","repos_url":"https://api.github.com/users/caward12/repos","events_url":"https://api.github.com/users/caward12/events{/privacy}","received_events_url":"https://api.github.com/users/caward12/received_events","type":"User","site_admin":false,"name":"Colleen
         Ward","company":"@turingschool","blog":"","location":"Denver, CO","email":"ward.colleen.a@gmail.com","hireable":true,"bio":"Back-End
-        Engineering Student","public_repos":38,"public_gists":17,"followers":3,"following":1,"created_at":"2016-08-03T23:33:01Z","updated_at":"2017-05-08T16:39:51Z","private_gists":1,"total_private_repos":0,"owned_private_repos":0,"disk_usage":507,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":0}}'
+        Engineering Student","public_repos":38,"public_gists":17,"followers":3,"following":1,"created_at":"2016-08-03T23:33:01Z","updated_at":"2017-05-08T16:39:51Z","private_gists":1,"total_private_repos":0,"owned_private_repos":0,"disk_usage":538,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":0}}'
     http_version: 
-  recorded_at: Wed, 10 May 2017 19:43:03 GMT
+  recorded_at: Wed, 10 May 2017 21:24:11 GMT
 - request:
     method: get
     uri: https://api.github.com/user/followers?access_token=<GITHUB_USER_TOKEN>
@@ -97,7 +97,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 19:43:04 GMT
+      - Wed, 10 May 2017 21:24:11 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -107,9 +107,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4868'
+      - '4996'
       X-Ratelimit-Reset:
-      - '1494447459'
+      - '1494455050'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -140,12 +140,12 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - cee4c0729c8e9147e7abcb45b9d69689
+      - eef8b8685a106934dcbb4b7c59fba0bf
       X-Github-Request-Id:
-      - F0F5:4005:6FA044B:8B2511E:59136D47
+      - F56C:3FF6:4BA7176:5E277BD:591384FB
     body:
       encoding: ASCII-8BIT
       string: '[{"login":"Carmer","id":9501766,"avatar_url":"https://avatars0.githubusercontent.com/u/9501766?v=3","gravatar_id":"","url":"https://api.github.com/users/Carmer","html_url":"https://github.com/Carmer","followers_url":"https://api.github.com/users/Carmer/followers","following_url":"https://api.github.com/users/Carmer/following{/other_user}","gists_url":"https://api.github.com/users/Carmer/gists{/gist_id}","starred_url":"https://api.github.com/users/Carmer/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Carmer/subscriptions","organizations_url":"https://api.github.com/users/Carmer/orgs","repos_url":"https://api.github.com/users/Carmer/repos","events_url":"https://api.github.com/users/Carmer/events{/privacy}","received_events_url":"https://api.github.com/users/Carmer/received_events","type":"User","site_admin":false},{"login":"NicholasJacques","id":20036943,"avatar_url":"https://avatars3.githubusercontent.com/u/20036943?v=3","gravatar_id":"","url":"https://api.github.com/users/NicholasJacques","html_url":"https://github.com/NicholasJacques","followers_url":"https://api.github.com/users/NicholasJacques/followers","following_url":"https://api.github.com/users/NicholasJacques/following{/other_user}","gists_url":"https://api.github.com/users/NicholasJacques/gists{/gist_id}","starred_url":"https://api.github.com/users/NicholasJacques/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/NicholasJacques/subscriptions","organizations_url":"https://api.github.com/users/NicholasJacques/orgs","repos_url":"https://api.github.com/users/NicholasJacques/repos","events_url":"https://api.github.com/users/NicholasJacques/events{/privacy}","received_events_url":"https://api.github.com/users/NicholasJacques/received_events","type":"User","site_admin":false},{"login":"VictoriaVasys","id":10079657,"avatar_url":"https://avatars3.githubusercontent.com/u/10079657?v=3","gravatar_id":"","url":"https://api.github.com/users/VictoriaVasys","html_url":"https://github.com/VictoriaVasys","followers_url":"https://api.github.com/users/VictoriaVasys/followers","following_url":"https://api.github.com/users/VictoriaVasys/following{/other_user}","gists_url":"https://api.github.com/users/VictoriaVasys/gists{/gist_id}","starred_url":"https://api.github.com/users/VictoriaVasys/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/VictoriaVasys/subscriptions","organizations_url":"https://api.github.com/users/VictoriaVasys/orgs","repos_url":"https://api.github.com/users/VictoriaVasys/repos","events_url":"https://api.github.com/users/VictoriaVasys/events{/privacy}","received_events_url":"https://api.github.com/users/VictoriaVasys/received_events","type":"User","site_admin":false}]'
     http_version: 
-  recorded_at: Wed, 10 May 2017 19:43:04 GMT
+  recorded_at: Wed, 10 May 2017 21:24:11 GMT
 recorded_with: VCR 3.0.3

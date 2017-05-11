@@ -6,11 +6,11 @@ describe "repo" do
       VCR.use_cassette("repos") do
         token = ENV['GITHUB_USER_TOKEN']
         user = GithubUser.search_user(token)
-        repos = user.repos(token)
+        repos = user.repos
 
         expect(repos).to be_an(Array)
         expect(repos.first).to be_a(Repo)
-        expect(repos.count).to eq(30)
+        expect(repos.count).to eq(38)
       end
     end
   end

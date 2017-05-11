@@ -10,8 +10,20 @@ class Repo
     attrs[:name]
   end
 
-  def self.repos(token)
+  def self.user_repos(token)
+    GithubService.new(token).repos.select do |repo|
+      repo[:owner][:html_url].split(/\W+/).last == "caward12"
+    end
+  end
+
+  def self.all_repos(token)
     GithubService.new(token).repos.map do |repo|
+      new(repo)
+    end
+  end
+
+  def self.repos(token)
+    user_repos(token).map do |repo|
       new(repo)
     end
   end

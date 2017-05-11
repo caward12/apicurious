@@ -21,11 +21,15 @@ class GithubService
   end
 
   def repos
-    parser(connection.get "/user/repos?access_token=#{@token}")
+    parser(connection.get "/user/repos?access_token=#{@token}&per_page=100")
   end
 
   def organizations
     parser(connection.get "/user/orgs?access_token=#{@token}")
+  end
+
+  def events(nickname)
+    parser(connection.get "/users/#{nickname}/events?access_token=#{@token}")
   end
 
 

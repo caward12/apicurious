@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 19:43:06 GMT
+      - Wed, 10 May 2017 21:24:13 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,16 +31,16 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4863'
+      - '4991'
       X-Ratelimit-Reset:
-      - '1494447459'
+      - '1494455050'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
       - Accept, Authorization, Cookie, X-GitHub-OTP
       - Accept-Encoding
       Etag:
-      - W/"614492faafe9d164a55c1e2b81c4c9be"
+      - W/"1a48158827036080ad552de337ca6aa6"
       Last-Modified:
       - Mon, 08 May 2017 16:39:51 GMT
       X-Oauth-Scopes:
@@ -66,16 +66,16 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 88531cdcf1929112ec480e1806d44a33
+      - 6694d697f15dfc31f0ffaf8cdb1d5a86
       X-Github-Request-Id:
-      - F0FA:4005:6FA0595:8B252C2:59136D4A
+      - F571:3FF6:4BA72DC:5E27966:591384FD
     body:
       encoding: ASCII-8BIT
       string: '{"login":"caward12","id":20826865,"avatar_url":"https://avatars3.githubusercontent.com/u/20826865?v=3","gravatar_id":"","url":"https://api.github.com/users/caward12","html_url":"https://github.com/caward12","followers_url":"https://api.github.com/users/caward12/followers","following_url":"https://api.github.com/users/caward12/following{/other_user}","gists_url":"https://api.github.com/users/caward12/gists{/gist_id}","starred_url":"https://api.github.com/users/caward12/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/caward12/subscriptions","organizations_url":"https://api.github.com/users/caward12/orgs","repos_url":"https://api.github.com/users/caward12/repos","events_url":"https://api.github.com/users/caward12/events{/privacy}","received_events_url":"https://api.github.com/users/caward12/received_events","type":"User","site_admin":false,"name":"Colleen
         Ward","company":"@turingschool","blog":"","location":"Denver, CO","email":"ward.colleen.a@gmail.com","hireable":true,"bio":"Back-End
-        Engineering Student","public_repos":38,"public_gists":17,"followers":3,"following":1,"created_at":"2016-08-03T23:33:01Z","updated_at":"2017-05-08T16:39:51Z","private_gists":1,"total_private_repos":0,"owned_private_repos":0,"disk_usage":507,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":0}}'
+        Engineering Student","public_repos":38,"public_gists":17,"followers":3,"following":1,"created_at":"2016-08-03T23:33:01Z","updated_at":"2017-05-08T16:39:51Z","private_gists":1,"total_private_repos":0,"owned_private_repos":0,"disk_usage":538,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":0}}'
     http_version: 
-  recorded_at: Wed, 10 May 2017 19:43:06 GMT
+  recorded_at: Wed, 10 May 2017 21:24:13 GMT
 - request:
     method: get
     uri: https://api.github.com/user/orgs?access_token=<GITHUB_USER_TOKEN>
@@ -97,7 +97,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 19:43:06 GMT
+      - Wed, 10 May 2017 21:24:14 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -107,9 +107,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4862'
+      - '4990'
       X-Ratelimit-Reset:
-      - '1494447459'
+      - '1494455050'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -140,12 +140,12 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 7efb7ae49588ef0269c6a1c1bd3721d9
+      - 6694d697f15dfc31f0ffaf8cdb1d5a86
       X-Github-Request-Id:
-      - F0FB:3FEC:26B6CC0:303642A:59136D4A
+      - F572:3FFB:74DBC80:918A914:591384FD
     body:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Wed, 10 May 2017 19:43:06 GMT
+  recorded_at: Wed, 10 May 2017 21:24:14 GMT
 recorded_with: VCR 3.0.3
