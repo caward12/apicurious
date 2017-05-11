@@ -1,36 +1,11 @@
-<div class="row">
-</div>
- <div class="row">
-   <div class ="col m3 s12">
-     <%= image_tag(@user.avatar_url, :height=> '200') %>
-      <h5><strong><%= current_user.name %></strong></h5>
-      <h6><%= current_user.nickname%></h6>
-      Organizations: <%= @user.organizations.count%>
-   </div>
-   <div class="col m9 s12">
-    <div class="col m3 s12">
-      Repositories: <%= @user.repos.count %>
-    </div>
-    <div class="col m3 s12">
-      Starred repos: <%= @user.starred.count %>
-    </div>
-    <div class="col m3 s12">
-      Followers: <%= @user.followers.count %>
-    </div>
-    <div class="col m3 s12">
-      Following: <%= @user.following.count %>
-    </div>
-    <hr>
-    <br>
-    <div class="colm5 s12">
-      <%= button_to "Create new Repo", dashboard_repos_new_path, method: 'get' %>
-    </div>
+    <%= render 'layouts/base_layout' %>
     <div class="col m9 s12">
       <% @user.repos.each do |repo| %>
-        <strong><%= repo.name %></strong>
-        <em><%= repo.language %><em>
+        <strong><h5><%= repo.name %></h5></strong><br>
+        <%= repo.language %>
         <br>
         <br>
         <hr>
       <% end %>
     </div>
+  </div>

@@ -6,4 +6,9 @@ class Dashboard::ReposController < ApplicationController
 
   def new
   end
+
+  def create
+    Repo.create_repo(current_user.oauth_token, params[:name])
+    redirect_to dashboard_repos_path
+  end
 end

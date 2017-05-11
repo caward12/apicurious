@@ -13,6 +13,17 @@ describe "repo" do
         expect(repos.count).to eq(38)
       end
     end
+
+    it "can create starred repos from raw data" do
+      VCR.use_cassette("star") do
+        token = ENV['GITHUB_USER_TOKEN']
+        user = GithubUser.search_user(token)
+        stars = user.starred
+
+        expect(stars).to be_an(Array)
+        expect(stars.first).to be_a(Repo)
+      end
+    end
   end
 
 end

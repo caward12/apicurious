@@ -37,6 +37,13 @@ class GithubService
     parser(connection.get("/notifications?all=true", token_param))
   end
 
+  def create_repo(name)
+    connection.post do |conn|
+      conn.url("/user/repos", token_param)
+      conn.body ={"name": name}.to_json
+    end
+  end
+
   private
 
   def connection

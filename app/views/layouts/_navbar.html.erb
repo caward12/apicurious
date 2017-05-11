@@ -1,8 +1,10 @@
 <nav class="nav">
     <div class="nav-wrapper">
+      <%= image_tag("https://www.icinga.com/wp-content/uploads/2014/07/github_logo.png", :height=> '40', :class=>"gh-logo") %>
       <ul id="nav-mobile" class="right">
         <% if current_user %>
-          <li>Hello, <%= current_user.name %></li>
+          <li class="nav-repo"><strong><%= link_to "+", new_dashboard_repo_path %></li></strong>
+          <li class="user-image"> <%= image_tag(@user.avatar_url, :height=> '40') %> </li>
           <li> <%= link_to "Logout", logout_path, method: :delete %>
         <% else  %>
           <li> <%= link_to "Login with Github", github_login_path %></li>
