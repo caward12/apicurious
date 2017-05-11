@@ -1,0 +1,7 @@
+    <%= render 'layouts/base_layout' %>
+    <div class="col m9 s12">
+      <% @user.followers.each do |f| %>
+        <%= image_tag(f.avatar_url, :height=> '40') %> <strong><%= f.nickname %></strong><br><br>
+      <% end %>
+    </div>
+  </div>

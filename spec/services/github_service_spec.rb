@@ -21,7 +21,6 @@ describe GithubService do
         starred = GithubService.new(token).starred
 
         expect(starred).to be_an(Array)
-        expect(starred.count).to eq(1)
       end
     end
   end
@@ -34,7 +33,6 @@ describe GithubService do
 
         expect(followers).to be_an(Array)
         expect(followers.first).to be_a(Hash)
-        expect(followers.count).to eq(3)
       end
     end
   end
@@ -47,7 +45,6 @@ describe GithubService do
 
         expect(following).to be_an(Array)
         expect(following.first).to be_a(Hash)
-        expect(following.count).to eq(1)
       end
     end
   end
@@ -60,7 +57,6 @@ describe GithubService do
 
         expect(repos).to be_an(Array)
         expect(repos.first).to be_a(Hash)
-        expect(repos.count).to eq(43)
       end
     end
   end
@@ -72,7 +68,6 @@ describe GithubService do
         orgs = GithubService.new(token).organizations
 
         expect(orgs).to be_an(Array)
-        expect(orgs.count).to eq(0)
       end
     end
   end
@@ -85,7 +80,17 @@ describe GithubService do
         events = GithubService.new(token).events(nickname)
 
         expect(events).to be_an(Array)
-        expect(events.count).to eq(30)
+      end
+    end
+  end
+
+  context "notifications" do
+    it "finds user's notifications" do
+      VCR.use_cassette("github_service_notifications") do
+        token = ENV['GITHUB_USER_TOKEN']
+        notifications = GithubService.new(token).notifications
+
+        expect(notifications).to be_an(Array)
       end
     end
   end

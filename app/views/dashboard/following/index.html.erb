@@ -1,33 +1,12 @@
-<div class="row">
-</div>
- <div class="row">
-   <div class ="col m3 s12">
-     <%= image_tag(@user.avatar_url, :height=> '200') %>
-      <h5><strong><%= current_user.name %></strong></h5>
-      <h6><%= current_user.nickname%></h6>
-      Organizations: <%= @user.organizations.count%>
-   </div>
-   <div class="col m9 s12">
-    <div class="col m3 s12">
-      Repositories: <%= @user.repos.count %>
-    </div>
-    <div class="col m3 s12">
-      Starred repos: <%= @user.starred.count %>
-    </div>
-    <div class="col m3 s12">
-      Followers: <%= @user.followers.count %>
-    </div>
-    <div class="col m3 s12">
-      Following: <%= @user.following.count %>
-    </div>
-    <hr>
-    <br>
+    <%= render 'layouts/base_layout' %>
     <div class="col m9 s12">
       <% @user.following.each do |f| %>
-        <strong><%= f.nickname %></strong><br><br>
-        Recent Activity:<br>
+        <%= image_tag(f.avatar_url, :height=> '40') %> <strong><%= f.nickname %></strong><br><br>
+        <strong>Recent Activity:</strong><br>
           <% f.events(f.nickname)[0..4].each do |event| %>
             <%= event.type %> on <%= event.repo %><br>
           <% end %>
+          <hr>
       <% end %>
     </div>
+  </div>

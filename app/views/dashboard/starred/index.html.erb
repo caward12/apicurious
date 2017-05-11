@@ -1,0 +1,9 @@
+    <%= render 'layouts/base_layout' %>
+    <div class="col m9 s12">
+      <% @user.starred.each do |star| %>
+        <h5><%= star.owner %> / <%= star.name %></h5><br>
+        <%= star.language %>
+        <hr>
+      <% end %>
+    </div>
+  </div>

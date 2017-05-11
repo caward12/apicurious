@@ -10,8 +10,10 @@ delete '/logout', to: 'sessions#destroy'
 get '/dashboard', to: 'dashboard#index'
 
 namespace :dashboard do
-  get '/repos', to: 'repos#index'
+  resources :repos, only: [:index, :new, :create]
   get '/following', to: 'following#index'
+  get '/starred', to: 'starred#index'
+  get '/followers', to: 'followers#index'
 end
 
 end

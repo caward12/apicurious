@@ -1,0 +1,29 @@
+<div class="row">
+</div>
+ <div class="row">
+   <div class ="col m3 s12">
+     <%= image_tag(@user.avatar_url, :height=> '200') %>
+      <h5><strong><%= current_user.name %></strong></h5>
+      <h6><%= current_user.nickname%></h6>
+      Organizations: <%= @user.organizations.count%>
+      <br>
+      <br>
+      <%= link_to "Create new Repo", new_dashboard_repo_path %>
+   </div>
+    <div class="col m9 s12">
+    <div class="page-header">
+      <div class="col m3 s12">
+        <%= link_to 'Repositories:', dashboard_repos_path %> <%= @user.repos.count %>
+      </div>
+      <div class="col m3 s12">
+        <%= link_to 'Starred repos: ', dashboard_starred_path %><%= @user.starred.count %>
+      </div>
+      <div class="col m3 s12">
+        <%= link_to 'Followers: ', dashboard_followers_path %><%= @user.followers.count %>
+      </div>
+      <div class="col m3 s12">
+        <%= link_to 'Following:', dashboard_following_path %> <%= @user.following.count %>
+      </div>
+      <hr>
+      <br>
+    </div>

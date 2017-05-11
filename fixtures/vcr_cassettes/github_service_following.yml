@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - GitHub.com
       Date:
-      - Wed, 10 May 2017 19:43:37 GMT
+      - Thu, 11 May 2017 17:22:21 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -31,9 +31,9 @@ http_interactions:
       X-Ratelimit-Limit:
       - '5000'
       X-Ratelimit-Remaining:
-      - '4858'
+      - '4901'
       X-Ratelimit-Reset:
-      - '1494447459'
+      - '1494525482'
       Cache-Control:
       - private, max-age=60, s-maxage=60
       Vary:
@@ -64,12 +64,12 @@ http_interactions:
       X-Xss-Protection:
       - 1; mode=block
       X-Served-By:
-      - 7f48e2f7761567e923121f17538d7a6d
+      - a51acaae89a7607fd7ee967627be18e4
       X-Github-Request-Id:
-      - F101:3FFB:73D26C2:90408B2:59136D69
+      - DE00:4005:7DC3AB0:9CA565A:59149DCD
     body:
       encoding: ASCII-8BIT
       string: '[{"login":"TheKaterTot","id":1721599,"avatar_url":"https://avatars3.githubusercontent.com/u/1721599?v=3","gravatar_id":"","url":"https://api.github.com/users/TheKaterTot","html_url":"https://github.com/TheKaterTot","followers_url":"https://api.github.com/users/TheKaterTot/followers","following_url":"https://api.github.com/users/TheKaterTot/following{/other_user}","gists_url":"https://api.github.com/users/TheKaterTot/gists{/gist_id}","starred_url":"https://api.github.com/users/TheKaterTot/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/TheKaterTot/subscriptions","organizations_url":"https://api.github.com/users/TheKaterTot/orgs","repos_url":"https://api.github.com/users/TheKaterTot/repos","events_url":"https://api.github.com/users/TheKaterTot/events{/privacy}","received_events_url":"https://api.github.com/users/TheKaterTot/received_events","type":"User","site_admin":false}]'
     http_version: 
-  recorded_at: Wed, 10 May 2017 19:43:37 GMT
+  recorded_at: Thu, 11 May 2017 17:22:21 GMT
 recorded_with: VCR 3.0.3
