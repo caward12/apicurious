@@ -1,5 +1,79 @@
-<% if current_user %>
- <h4> <%= current_user.name %>'s Dashboard</h4>
- <% else %>
- <h4> Guest Dashboard </h4>
- <% end %>
+<div class="row">
+</div>
+ <div class="row">
+   <div class ="col m3 s12">
+     <%= image_tag(@user.avatar_url, :height=> '200') %>
+      <h5><strong><%= current_user.name %></strong></h5>
+      <h6><%= current_user.nickname%></h6>
+      Organizations: <%= @user.organizations.count%>
+   </div>
+   <div class="col m9 s12">
+    <div class="col m3 s12">
+      <%= link_to 'Repositories:', dashboard_repos_path %> <%= @user.repos.count %>
+    </div>
+    <div class="col m3 s12">
+      Starred repos: <%= @user.starred.count %>
+    </div>
+    <div class="col m3 s12">
+      Followers: <%= @user.followers.count %>
+    </div>
+    <div class="col m3 s12">
+      <%= link_to 'Following:', dashboard_following_path %> <%= @user.following.count %>
+    </div>
+    <hr>
+    <br>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos.first.name %></strong><br>
+          <small>Language: <%= @user.repos.first.language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[1].name %></strong><br>
+          <small>Language: <%= @user.repos[1].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[2].name %></strong><br>
+          <small>Language: <%= @user.repos[2].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[3].name %></strong><br>
+          <small>Language: <%= @user.repos[3].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m10 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong>Recent Commits:</strong><br><br>
+            <% @user.recent_commits(@user.nickname).each do |commit| %>
+              <li><em>"<%= commit.message %>"</em>  to <strong><%= commit.repo %></strong> repository </li>
+            <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col m10 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong>Open Pull Requests:</strong><br><br>
+            <% @user.open_pull_requests(@user.nickname).each do |pr| %>
+              <li><%= pr.pr_title %> for <strong><%= pr.repo %></strong> repository </li>
+            <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+ </div>
+ </div>

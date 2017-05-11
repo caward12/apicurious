@@ -7,7 +7,17 @@ require 'spec_helper'
 require 'rspec/rails'
 require 'capybara'
 require 'database_cleaner'
+require 'launchy'
 # Add additional requires below this line. Rails is not loaded until this point!
+
+VCR.configure do |config|
+  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.hook_into :webmock
+  config.filter_sensitive_data('<GITHUB_USER_TOKEN>') { ENV['GITHUB_USER_TOKEN'] }
+  config.filter_sensitive_data('<GITHUB_KEY>') { ENV['GITHUB_ID'] }
+  config.filter_sensitive_data('<GITHUB_SECRET>') { ENV['GITHUB_SECRET'] }
+end
+
 DatabaseCleaner.strategy = :truncation
 
 RSpec.configure do |c|
@@ -26,16 +36,16 @@ def stub_omniauth
     provider: 'github',
     extra: {
       raw_info: {
-        user_id: "1234",
-        name: "Colleen"
+        uid: "1234",
+        name: "Colleen Ward"
       }
     },
     credentials: {
-      token: "pizza",
+      token: ENV['GITHUB_USER_TOKEN'],
       secret: "secretpizza"
     },
     info: {
-      nickname: "caward"
+      nickname: "caward12"
     }
     })
 end
