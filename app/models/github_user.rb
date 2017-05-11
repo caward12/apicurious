@@ -56,5 +56,13 @@ class GithubUser
     Event.open_pull_requests(nickname, @token)
   end
 
+  def notifications
+    Notification.notifications(@token)
+  end
+
+  def mentions
+    Notification.mentions(@token)
+  end
+
 
 end

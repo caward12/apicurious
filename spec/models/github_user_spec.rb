@@ -107,4 +107,28 @@ describe 'GithubUser' do
       end
     end
   end
+
+  context 'notifications' do
+    it "can find notifications" do
+      VCR.use_cassette("github_user_notifications") do
+        token = ENV['GITHUB_USER_TOKEN']
+        user = GithubUser.search_user(token)
+        notifications = user.notifications
+
+        expect(notifications).to be_an(Array)
+      end
+    end
+  end
+
+  context 'mentions' do
+    it 'can find mentions' do
+      VCR.use_cassette("github_user_mentions") do
+        token = ENV['GITHUB_USER_TOKEN']
+        user = GithubUser.search_user(token)
+        mentions = user.mentions
+
+        expect(mentions).to be_an(Array)
+      end
+    end
+  end
 end

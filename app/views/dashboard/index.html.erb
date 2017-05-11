@@ -74,6 +74,16 @@
         </div>
       </div>
     </div>
+    <div class="col m10 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong>Mentions:</strong><br><br>
+            <% @user.mentions.each do |mention| %>
+              <li>From <%= mention.owner %> on <strong><%= mention.repo %></strong> repository </li>
+            <% end %>
+        </div>
+      </div>
+    </div>
   </div>
  </div>
  </div>
