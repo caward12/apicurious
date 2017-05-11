@@ -1,22 +1,19 @@
 class Commit
 
-  attr_reader :attrs
+  attr_reader :attrs, :repo
 
-  def initialize(attrs={})
+  def initialize(attrs={}, repo)
     @attrs = attrs
+    @repo = repo
   end
 
   def message
     attrs[:message]
   end
 
-  def repo
-    attrs[:url].split(/\W+/)[-3]
-  end
-
-  def self.commits(payload)
+  def self.commits(payload, repo)
     payload[:commits].map do |commit|
-      new(commit)
+      new(commit, repo)
     end.first
   end
 

@@ -1,9 +1,9 @@
 <nav class="nav">
     <div class="nav-wrapper">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <ul id="nav-mobile" class="right">
         <% if current_user %>
           <li>Hello, <%= current_user.name %></li>
-          <li> <%= link_to "Logout", logout_path, method: :delete %>          
+          <li> <%= link_to "Logout", logout_path, method: :delete %>
         <% else  %>
           <li> <%= link_to "Login with Github", github_login_path %></li>
         <% end %>

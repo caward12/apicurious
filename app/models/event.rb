@@ -14,9 +14,13 @@ class Event
     attrs[:payload]
   end
 
+  def repo
+    attrs[:repo][:name].split('/').last
+  end
+
   def self.recent_commits(nickname, token)
     push_events(nickname, token).map do |event|
-      Commit.commits(event.payload)
+      Commit.commits(event.payload, event.repo)
     end
   end
 

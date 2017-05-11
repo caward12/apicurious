@@ -1,9 +1,8 @@
-
 <div class="row">
 </div>
  <div class="row">
    <div class ="col m3 s12">
-     <%= image_tag(@user.avatar_url) %>
+     <%= image_tag(@user.avatar_url, :height=> '200') %>
       <h5><strong><%= current_user.name %></strong></h5>
       <h6><%= current_user.nickname%></h6>
       Organizations: <%= @user.organizations.count%>
@@ -22,6 +21,7 @@
       Following: <%= @user.following.count %>
     </div>
     <hr>
+    <br>
     <div class="col m5 s12">
       <div class="card">
         <div class="card-content">
@@ -54,13 +54,15 @@
         </div>
       </div>
     </div>
-    <div class="col m9 s12">
-      Recent Commits:
-      <ul>
-        <% @user.recent_commits(@user.nickname).each do |commit| %>
-          <li><%= commit.repo %> / <%= commit.message %></li>
-        <% end %>
-      </ul>
+    <div class="col m10 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong>Recent Commits:</strong><br><br>
+            <% @user.recent_commits(@user.nickname).each do |commit| %>
+              <li><em>"<%= commit.message %>"</em>  to <strong><%= commit.repo %></strong> repository </li>
+            <% end %>
+        </div>
+      </div>
     </div>
   </div>
  </div>
