@@ -10,6 +10,14 @@ class Repo
     attrs[:name]
   end
 
+  def description
+    attrs[:description]
+  end
+
+  def language
+    attrs[:language]
+  end
+
   def self.user_repos(token)
     GithubService.new(token).repos.select do |repo|
       repo[:owner][:html_url].split(/\W+/).last == "caward12"

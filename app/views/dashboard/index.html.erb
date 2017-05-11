@@ -2,35 +2,66 @@
 <div class="row">
 </div>
  <div class="row">
-   <div class ="col s4">
+   <div class ="col m3 s12">
      <%= image_tag(@user.avatar_url) %>
+      <h5><strong><%= current_user.name %></strong></h5>
+      <h6><%= current_user.nickname%></h6>
+      Organizations: <%= @user.organizations.count%>
    </div>
-   <div class="col s2">
+   <div class="col m9 s12">
+    <div class="col m3 s12">
       Repositories: <%= @user.repos.count %>
-   </div>
-   <div class="col s2">
-       Starred repos: <%= @user.starred.count %>
-   </div>
-   <div class="col s2">
-       Followers: <%= @user.followers.count %>
-   </div>
-   <div class="col s2">
+    </div>
+    <div class="col m3 s12">
+      Starred repos: <%= @user.starred.count %>
+    </div>
+    <div class="col m3 s12">
+      Followers: <%= @user.followers.count %>
+    </div>
+    <div class="col m3 s12">
       Following: <%= @user.following.count %>
     </div>
+    <hr>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos.first.name %></strong><br>
+          <small>Language: <%= @user.repos.first.language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[1].name %></strong><br>
+          <small>Language: <%= @user.repos[1].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[2].name %></strong><br>
+          <small>Language: <%= @user.repos[2].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m5 s12">
+      <div class="card">
+        <div class="card-content">
+          <strong><%= @user.repos[3].name %></strong><br>
+          <small>Language: <%= @user.repos[3].language %></small><br><br>
+        </div>
+      </div>
+    </div>
+    <div class="col m9 s12">
+      Recent Commits:
+      <ul>
+        <% @user.recent_commits(@user.nickname).each do |commit| %>
+          <li><%= commit.repo %> / <%= commit.message %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
  </div>
- <div class="row">
-   <div class ="col s6">
-     <h5><strong><%= current_user.name %></strong></h5>
-   </div>
- </div>
- <div class="row">
-   <div class ="col s6">
-     <h6><%= current_user.nickname%></h6>
-   </div>
- </div>
- <div class="row">
-   <div class ="col s6">
-
-     Organizations: <%= @user.organizations.count%>
-   </div>
  </div>
