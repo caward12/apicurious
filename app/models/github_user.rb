@@ -37,7 +37,7 @@ class GithubUser
   end
 
   def repos
-    Repo.repos(@token)
+    Repo.repos(@token, nickname)
   end
 
   def organizations
