@@ -229,6 +229,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.2)
   database_cleaner
+  faraday
   figaro
   jbuilder (~> 2.5)
   jquery-rails

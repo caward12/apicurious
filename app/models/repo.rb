@@ -26,9 +26,9 @@ class Repo
     attrs[:owner][:login]
   end
 
-  def self.user_repos(token)
+  def self.user_repos(token, nickname)
     GithubService.new(token).repos.select do |repo|
-      repo[:owner][:html_url].split(/\W+/).last == "caward12"
+      repo[:owner][:html_url].split(/\W+/).last == nickname
     end
   end
 
@@ -38,12 +38,12 @@ class Repo
     end
   end
 
-  def self.sorted_repos_date(token)
-    user_repos(token).sort_by {|repo| repo[:updated_at]}.reverse
+  def self.sorted_repos_date(token, nickname)
+    user_repos(token, nickname).sort_by {|repo| repo[:updated_at]}.reverse
   end
 
-  def self.repos(token)
-    sorted_repos_date(token).map do |repo|
+  def self.repos(token, nickname)
+    sorted_repos_date(token, nickname).map do |repo|
       new(repo)
     end
   end
