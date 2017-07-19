@@ -1,24 +1,24 @@
 # README
+Apicurious is an applicaiton that consumes the GitHub api to recreate a user's profile. It users GitHub Oauth to authenticate a user. Users can:
+- view their photo
+- view their own repos
+- create a repo
+- view starred repos
+- view followers
+- view following
+- view recent commits
+- view open pull requests
+- view mentions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Production site: https://apicurious-cw.herokuapp.com/
 
-Things you may want to cover:
+![apicurious_user](app/assets/images/apicurious_user.png)
 
-* Ruby version
+## Setup
 
-* System dependencies
 
-* Configuration
+`git clone git@github.com:caward12/apicurious.git`
 
-* Database creation
+`cd apicurious`
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle`
